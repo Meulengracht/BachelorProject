@@ -1,0 +1,356 @@
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.4.6)  22 APR 2014 20:59
+entering extended mode
+**C:/Users/Phail/Desktop/Bachelorproject/MidwayReport.tex
+(C:/Users/Phail/Desktop/Bachelorproject/MidwayReport.tex
+LaTeX2e <2011/06/27>
+Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
+abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
+croatian, czech, danish, dutch, esperanto, estonian, farsi, finnish, french, ga
+lician, german, german-x-2013-05-26, greek, gujarati, hindi, hungarian, iceland
+ic, indonesian, interlingua, irish, italian, kannada, kurmanji, latin, latvian,
+ lithuanian, malayalam, marathi, mongolian, mongolianlmc, monogreek, ngerman, n
+german-x-2013-05-26, nynorsk, oriya, panjabi, pinyin, polish, portuguese, roman
+ian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swissgerm
+an, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, usengl
+ishmax, welsh, loaded.
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\report.cls"
+Document Class: report 2007/10/19 v1.4h Standard LaTeX document class
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\size10.clo"
+File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@chapter=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(C:\Users\Phail\AppData\Roaming\MiKTeX\2.9\tex\latex\xcolor\xcolor.sty
+Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\color.cfg"
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count88
+)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1337.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1341.
+Package xcolor Info: Model `RGB' extended on input line 1353.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1355.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1356.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1357.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
+
+(C:\Users\Phail\AppData\Roaming\MiKTeX\2.9\tex\latex\xcolor\svgnam.def
+File: svgnam.def 2007/01/21 v2.11 Predefined colors according to SVG 1.1 (UK)
+))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\trig.sty"
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
+File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+)
+\Gin@req@height=\dimen103
+\Gin@req@width=\dimen104
+)
+(C:\Users\Phail\AppData\Roaming\MiKTeX\2.9\tex\latex\tocbibind\tocbibind.sty
+Package: tocbibind 2010/10/13 v1.5k extra ToC listings
+Package tocbibind Info: The document has chapter divisions on input line 50.
+
+
+Package tocbibind Note: Using chapter style headings, unless overridden.
+
+) (C:\Users\Phail\Desktop\Bachelorproject\ku-forside.sty
+Package: ku-forside 2007/07/07 v1.0 Frontpages with UCPH logos
+
+(C:\Users\Phail\AppData\Roaming\MiKTeX\2.9\tex\latex\eso-pic\eso-pic.sty
+Package: eso-pic 2013/10/06 v2.0d eso-pic (RN)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\atbegshi.sty"
+Package: atbegshi 2011/10/05 v1.16 At begin shipout hook (HO)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.sty"
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+)))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ae\ae.sty"
+Package: ae 2001/02/12 1.3 Almost European Computer Modern
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\fontenc.sty"
+Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\t1enc.def"
+File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding T1 on input line 43.
+)
+LaTeX Font Info:    Try loading font information for T1+aer on input line 100.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ae\t1aer.fd"
+File: t1aer.fd 1997/11/16 Font definitions for T1/aer.
+)))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ae\aecompl.sty"
+Package: aecompl 1998/07/23 0.9 T1 Complements for AE fonts (D. Roegel)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ifthen.sty"
+Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\babel\babel.sty"
+Package: babel 2008/07/08 v3.8m The Babel package
+
+*************************************
+* Local config file bblopts.cfg used
+*
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\bblopts.cfg"
+File: bblopts.cfg 2006/07/31 v1.0 MiKTeX 'babel' configuration
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\babel\danish.ldf"
+Language: danish 2009/09/19 v1.3r Danish support from the babel system
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\babel\babel.def"
+File: babel.def 2008/07/08 v3.8m Babel common definitions
+\babel@savecnt=\count89
+\U@D=\dimen105
+)
+Package babel Info: Making " an active character on input line 82.
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\babel\english.ldf"
+Language: english 2005/03/30 v3.3o English support from the babel system
+\l@canadian = a dialect from \language\l@american 
+\l@australian = a dialect from \language\l@british 
+\l@newzealand = a dialect from \language\l@british 
+)))
+(C:\Users\Phail\Desktop\Bachelorproject\MidwayReport.aux
+
+LaTeX Warning: Label `fig:code_layout_end' multiply defined.
+
+
+LaTeX Warning: Label `fig:code_layout_end' multiply defined.
+
+)
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
+ (C:\Users\Phail\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count90
+\scratchdimen=\dimen106
+\scratchbox=\box26
+\nofMPsegments=\count91
+\nofMParguments=\count92
+\everyMPshowfont=\toks15
+\MPscratchCnt=\count93
+\MPscratchDim=\dimen107
+\MPnumerator=\count94
+\makeMPintoPDFobject=\count95
+\everyMPtoPDFconversion=\toks16
+)
+\AtBeginShipoutBox=\box27
+ <nat-farve.pdf, id=1, 597.23125pt x 845.1575pt>
+File: nat-farve.pdf Graphic file (type pdf)
+ <use nat-farve.pdf>
+Package pdftex.def Info: nat-farve.pdf used on input line 51.
+(pdftex.def)             Requested size: 702.625pt x 602.25pt.
+File: nat-farve.pdf Graphic file (type pdf)
+
+<use nat-farve.pdf>
+Package pdftex.def Info: nat-farve.pdf used on input line 51.
+(pdftex.def)             Requested size: 702.625pt x 1003.75pt.
+ <nat-en.pdf, id=4, 597.23125pt x 845.1575pt>
+File: nat-en.pdf Graphic file (type pdf)
+
+<use nat-en.pdf>
+Package pdftex.def Info: nat-en.pdf used on input line 51.
+(pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
+LaTeX Font Info:    Try loading font information for T1+phv on input line 51.
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\t1phv.fd"
+File: t1phv.fd 2001/06/04 scalable font definitions for T1/phv.
+)
+LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <20> not available
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 51.
+
+
+LaTeX Font Warning: Font shape `T1/phv/sb/n' undefined
+(Font)              using `T1/phv/m/n' instead on input line 51.
+
+[1{C:/Users/Phail/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
+
+ <C:/Users/Phail/Desktop/Bachelorproject/nat-farve.pdf> <C:/Users/Phail/Desktop
+/Bachelorproject/nat-en.pdf>] (C:\Users\Phail\Desktop\Bachelorproject\MidwayRep
+ort.toc
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 3.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 3.
+)
+\tf@toc=\write3
+
+[2
+
+]
+Chapter 1.
+[3
+
+]
+LaTeX Font Info:    Try loading font information for OMS+aer on input line 82.
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ae\omsaer.fd"
+File: omsaer.fd 1999/12/27
+)
+LaTeX Font Info:    Font shape `OMS/aer/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 82.
+ [4]
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 125.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 125.
+ [5]
+[6] [7] [8]
+Chapter 2.
+[9
+
+] <DirectoryLayoutBegin.png, id=66, 137.7647pt x 168.63pt>
+File: DirectoryLayoutBegin.png Graphic file (type png)
+
+<use DirectoryLayoutBegin.png>
+Package pdftex.def Info: DirectoryLayoutBegin.png used on input line 214.
+(pdftex.def)             Requested size: 137.76434pt x 168.62958pt.
+
+<LayoutProposal1.png, id=68, 127.97812pt x 85.06781pt>
+File: LayoutProposal1.png Graphic file (type png)
+
+<use LayoutProposal1.png>
+Package pdftex.def Info: LayoutProposal1.png used on input line 223.
+(pdftex.def)             Requested size: 127.9778pt x 85.0676pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[10 <C:/Users/Phail/Desktop/Bachelorproject/DirectoryLayoutBegin.png>]
+<LayoutProposal2.png, id=74, 216.05719pt x 112.16907pt>
+File: LayoutProposal2.png Graphic file (type png)
+
+<use LayoutProposal2.png>
+Package pdftex.def Info: LayoutProposal2.png used on input line 232.
+(pdftex.def)             Requested size: 216.05664pt x 112.16878pt.
+ [11 <C:/Users/Phail/Desktop/Bachelorproject/LayoutProposal1.png> <C:/Users/Pha
+il/Desktop/Bachelorproject/LayoutProposal2.png>]
+Chapter 3.
+File: DirectoryLayoutBegin.png Graphic file (type png)
+<use DirectoryLayoutBegin.png>
+Package pdftex.def Info: DirectoryLayoutBegin.png used on input line 255.
+(pdftex.def)             Requested size: 137.76434pt x 168.62958pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[12
+
+] <DirectoryLayoutEnd.png, id=82, 216.05719pt x 207.77625pt>
+File: DirectoryLayoutEnd.png Graphic file (type png)
+
+<use DirectoryLayoutEnd.png>
+Package pdftex.def Info: DirectoryLayoutEnd.png used on input line 264.
+(pdftex.def)             Requested size: 216.05664pt x 207.77573pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+LaTeX Font Info:    Try loading font information for T1+aett on input line 279.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ae\t1aett.fd"
+File: t1aett.fd 1997/11/16 Font definitions for T1/aett.
+) [13] [14 <C:/Users/Phail/Desktop/Bachelorproject/DirectoryLayoutEnd.png>] [15
+]
+Chapter 4.
+[16
+
+] [17]
+Chapter 5.
+
+Underfull \hbox (badness 2285) in paragraph at lines 349--352
+[]\T1/aer/m/n/10 Minix Spec-i-fi-ca-tions, \T1/aer/m/it/10 http://www.minix3.or
+g/ \T1/aer/m/n/10 Spec-i-fi-ca-tions & About
+ []
+
+
+Overfull \hbox (48.44829pt too wide) in paragraph at lines 364--367
+[]\T1/aer/m/n/10 Pintos Spec-i-fi-ca-tions, \T1/aer/m/it/10 http://www.stanford
+.edu/class/cs140/projects/pintos/pintos.html
+ []
+
+[18
+
+] (C:\Users\Phail\Desktop\Bachelorproject\MidwayReport.aux)
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 2969 strings out of 493921
+ 38717 string characters out of 3144877
+ 107199 words of memory out of 3000000
+ 6176 multiletter control sequences out of 15000+200000
+ 52659 words of font info for 82 fonts, out of 3000000 for 9000
+ 841 hyphenation exceptions out of 8191
+ 35i,12n,35p,1324b,262s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Progra
+m Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program 
+Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Fi
+les (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files
+ (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files (x8
+6)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files (x86)/M
+iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files (x86)/MiKTe
+X 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 
+2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Program Files (x86)/MiKTeX 2.
+9/fonts/type1/public/amsfonts/cm/cmti8.pfb><C:/Program Files (x86)/MiKTeX 2.9/f
+onts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fon
+ts/type1/urw/helvetic/uhvb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1
+/urw/helvetic/uhvr8a.pfb>
+Output written on MidwayReport.pdf (18 pages, 244792 bytes).
+PDF statistics:
+ 143 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 49 words of extra memory for PDF output out of 10000 (max. 10000000)
+
