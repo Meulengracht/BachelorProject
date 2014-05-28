@@ -1,0 +1,412 @@
+\documentclass{DIKU-article}[2006/05/09]
+
+\usepackage[utf8]{inputenc}
+
+%\selectdanish % Add this if your report is in Danish
+
+%\setlength{\errorcontextlines}{999} %Can be used for debugging purposes
+%\alternativecitationstyle
+%\draft
+
+\titlehead{Instructions to use DIKU style files}
+\authorhead{Jyrki Katajainen and Kimmo Raatikainen}
+
+\title{Instructions to use {DIKU} style files}
+
+\author{%
+Jyrki Katajainen\inst{1}
+\and
+Kimmo Raatikainen\inst{2}%
+}
+
+\institute{%
+Department of Computer Science, University of Copenhagen\\
+Universitetsparken 5, DK-2100 Copenhagen East, Denmark\\
+\email{jyrki@di.ku.dk}
+\and
+University of Helsinki, Department of Computer Science\\
+P.O.~Box 68, FIN-00014 University of Helsinki, Finland\\
+\email{Kimmo.Raatikainen@cs.helsinki.fi}%
+}
+
+\dates{CPH STL Report 2001-1, August 1994. Revised September 1994,
+  October 1994, October 1996, December 2000, April 2001, June 2001,
+  February 2005, February 2014.}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+Each report must include an abstract that summarizes the results.
+Recommended length is at most 150 words.  The abstract should not
+contain any references or displayed equations.  \LaTeX-environment is
+\verb|abstract|.
+\end{abstract}
+
+\begin{subject}
+A report can provide the CR Classification (see the appropriate issue
+of \textit{Computing Reviews}), but this is not obligatory.
+\LaTeX-environment is \verb|subject|.
+\end{subject}
+
+\begin{keywords}
+List of keywords (4--6) can be useful but not obligatory.
+\LaTeX-environment is \verb|keywords|.
+\end{keywords}
+
+\section{Introduction}
+
+We encourage the students to use \LaTeX\ when preparing their
+manuscripts. For this purpose we have provided the \LaTeX\ style file
+\verb|DIKU-article.cls|, and the Bib\TeX\ style files \verb|DIKU.bst|
+and \verb|DIKU-alternative.bst|.  This document describes how these
+style files are to be used.
+
+\section{General}
+
+The \LaTeX\ style file \texttt{DIKU-article.cls} does not accept any
+options.  In \verb|\documentstyle|-command all options given in
+brackets are simply omitted.  The page layout should not be
+changed in any way.
+
+Redundant spaces ought to be minimized by careful arrangement of
+tables and figures.  Read your \texttt{.log} file carefully.  There
+should be no \verb!Overfull \hbox! (as here) and certainly no visible
+one (more than \texttt{1pt}).  If necessary, reword the text.  The
+preamble command \verb|\draft| can be used to produce a visible
+overfullrulebox in the margin.
+
+The style file provides macros to create running heads.  The
+\verb|\authorhead| contains the authors' names as ``Firstname
+Surname'', ``F. Surname1, F. Surname2'', and ``F. Surname1,
+F. Surname2, F. Surname3'' for up to three authors, and ``Surname1
+et~al.'' for four or more authors.  The \verb|titlehead| should
+contain a short form of the title, not more than 30 characters.
+
+The argument of \verb|\title|-command must be written in sentence case
+(capitalize only the first word, proper nouns, and as dictated by
+other specific rules).  When the paper has more than one author, the
+authors in the argument of \verb|\author|-command are separated by
+usual \verb|\and|-command or by \verb|\AND|-command that inserts
+vertical glue between the blocks of authors' names. Affiliations
+should be given using \verb|\institute|-command. Also here
+\verb|\and|-command can be used as in \verb|\author|-command. In a
+multi-author paper, to link the authors and their affiliations
+\verb|\inst|-command can be used, e.g.~\verb|\inst{1}| produces the
+superscript $^1$.
+
+The use of footnotes and appendices should be avoided.  However, if
+appendices are necessary, their place is after
+\textbf{Acknowledgements} and before \textbf{References}.
+
+\section{Sectioning, numbering, etc.}
+
+\subsection{Sectioning}
+
+The following three \LaTeX-sectioning commands are available:
+\verb|\section|, \verb|\subsection|, and \verb|\subsubsection|.
+Use also sentence case in all headings.
+
+\subsection{Numbering}
+\label{numbering}
+
+The numbering of displayed equations, theorems, figures, tables, and
+other ``numbered'' environments follows one of two styles: either
+consecutive in each section, or consecutive through the whole paper
+(default).  If you prefer the first style, the style file provides
+\verb|\twolevelnumbering|-command.  The argument of the command is a
+list of environments that are numbered consecutively in each section,
+e.g.
+\begin{verbatim}
+    \twolevelnumbering{figure,equation,theorem}
+\end{verbatim}
+
+Tables should be referred to ``Table I''.  Equations and figures
+should be referred to in abbreviated forms: ``\eqnref{eqn:example}''
+and ``\figref{fig:example}''.  Use macros
+\verb|\eqnref{|\emph{eqn-label}\verb|}|,
+\verb|\figref{|\emph{fig-label}\verb|}|, and
+\verb|\tableref{|\emph{tab-label}\verb|}| to generate the references.
+
+\subsection{Lists of items}
+
+The depths of \LaTeX-environments \verb|itemize| and \verb|enumerate|
+are restricted to two.
+
+\subsection{Tabbing environment}
+
+The style file defines \verb|\tabbingstretch| to specify the strut
+to be used in the \texttt{tabbing} environment. The functionality of
+\verb|\tabbingstretch| is the same as that of \verb|\arraystretch|
+in \texttt{array} and \texttt{tabular} environments.
+
+\section{Theorem-like environments}
+
+The style file defines the following theorem-like environments:
+\begin{center}
+\begin{tabular}{llll}
+\verb|theorem|	& \verb|proposition|	& \verb|claim|	& \verb|fact| \\
+
+\verb|lemma|	& \verb|definition|	& \verb|problem|& \verb|remark| \\
+
+\verb|corollary|& \verb|conjecture|	& \verb|example|&  \verb|observation|
+\end{tabular}
+\end{center}
+These are ``numbered'' environments.  The style file also defines the
+corresponding ``unnumbered'' environments: \verb|theorem*|, ...,
+\verb|observation*|.  The proofs can be typed within the environment
+\verb|proof|.
+
+For example, the \LaTeX\ source
+\begin{verbatim}
+\begin{theorem}[Chebychev's Inequality]
+If $X$ is any random variable, then
+\begin{equation}
+\Pr[|X|\ge a] \le \mbox{\rm E}(X^2)/a^2\;.
+\label{eqn:example}
+\end{equation}
+\end{theorem}
+\end{verbatim}
+produces
+\begin{theorem}[Chebychev's Inequality]
+If $X$ is any random variable, then
+\begin{equation}
+\Pr[|X|\ge a] \le \mbox{\rm E}(X^2)/a^2\;.
+\label{eqn:example}
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+If $F(x)$ denotes the distribution function of the random variable
+$X$, then
+\[
+\Pr[|X|\ge a] = \int_{|x|\ge a} \;d\:F(x)\;.
+\]
+Since in the region of integration $|x|/a\ge1$, it follows that
+\[
+\int_{|x|\ge a} \;d\:F(x) \le \frac{1}{a^2}
+\int_{|x|\ge a} x^2\;d\:F(x)\;.
+\]
+By extending the integration to all values of $x$, we merely
+strengthen the inequality:
+\[
+\int_{|x|\ge a} \;d\:F(x) \le
+\frac{1}{a^2} \int_{|x|\ge a} x^2\;d\:F(x) \le
+\frac{1}{a^2} \int x^2\;d\:F(x) = 
+\mbox{\rm E}(X^2)/a^2\:.\; \qed
+\]
+% The following empty line is necessary
+
+\end{proof}
+
+When a proof ends with a displayed equation as above, the box ``\qed''
+should be at the right end of the formula rather than at the beginning
+of the next line.  In this case, the box must be inserted through
+\verb|\qed| at the end of the equation, and a blank line must be left
+between the closing of the equation and the \verb|\end{proof}| (as in
+the source of these instructions).
+
+\subsection{Spacing before and after environments}
+
+Extra space is added at the top of a list if the input file has a
+blank line before any list-making environment.  The vertical space
+after the environment is the same as the one preceding it.  The
+list-making environments are: \texttt{quote}, \texttt{quotation},
+\texttt{verse}, \texttt{itemize}, \texttt{enumerate},
+\texttt{description}, \texttt{center}, \texttt{flushleft}, and
+\texttt{flushright}, as well as all the theorem-like environments.
+
+\section{Figures and tables}
+
+Figures and tables are to be inserted in the text nearest their first
+reference.  They should be arranged so as not to cause an excessive
+amount of blank space on the remainder of the page.
+
+The captions are centered below the figures and above the tables.
+If a table needs to extend over to a second page, the continuation of the
+table should have a caption: ``Table II \emph{(cont.)}''.
+Macro \verb|\continued| generates this caption.
+Example:
+\begin{quote}
+   \verb|\begin{table}|\\
+   \verb|\continued   % Instead of \caption|\\
+   \verb|   ...|\\
+   \verb|\end{table}|
+\end{quote}
+
+\begin{figure}[tb]
+\begin{center}
+\input{example.pdf_t}
+\caption{This drawing was created with \texttt{xfig} and converted to
+  PDF/\LaTeX\ format. Then the \LaTeX\ part was inputted which further
+  included the PDF part.}
+\label{fig:example}
+\end{center}
+\end{figure}
+
+The figures could be produced using the \texttt{tikz} package,
+\texttt{xfig} vector-graphics editor, any other drawing tool, or
+cell-phone camera. The created pictures can be converted to, e.g.~GIF,
+JPEG, PNG, or PDF format, and included using any of the graphics
+packages available in the \LaTeX\ bundle.  In a high-quality report it
+may be necessary to use the same font in the text inside the figure as
+that used in the main body of the report.  An example of this is
+given in \figref{fig:example}. The picture was drawn with
+\texttt{xfig}; all text was written using the special flag and the
+default \LaTeX\ fonts.  The picture was exported to two files: a
+\LaTeX\ file contained the text and a PDF file contained the graphics.
+The \LaTeX\ part is inputted into this file; the \LaTeX\ part further
+includes the PDF part.
+
+When including your own pictures, you can use, for example, the
+\texttt{graphicx} package, in which case
+\begin{quotation}
+\verb|\usepackage{graphicx}|
+\end{quotation}
+must be added to the preamble, after which a new figure can be
+inserted by using the command:
+\begin{quotation}
+\verb|\includegraphics{|\emph{filename}\verb|}|\,.
+\end{quotation}
+\noindent
+For possible options, e.g.~how to scale the picture, consult your
+\LaTeX\ documentation.
+
+Remember that \textbf{previously published material must be
+  accompanied by written permission from the author and publisher!}
+
+\section{References}
+
+The preferred style of referring to the bibliography is to use
+numbered references: ``Raatikainen \cite{Raatikainen-1993} proposed to
+use the Bonferroni inequality (see \cite[pp.~41--43]{Kleijnen-1987} or
+\cite[\S~9.4]{Law-Kelton-1991}).''  This is obtained by using the
+standard \LaTeX-environment \verb|thebibliography| or Bib\TeX\ with
+the style file \texttt{DIKU.bst} which generates the bibliography
+items in the preferred format.
+
+Another possibility is to use the author-date citation style:
+``Raatikainen [1993] proposed to use the Bonferroni inequality (see
+[Kleijnen 1987, pp.~41--43] or [Law and Kelton 1991, \S~9.4]).''  Note
+that the years are in brackets in running text, but without brackets
+if the reference itself is in brackets.  For three or more authors,
+use ``et~al.''  Several papers in the same year are distinguished as
+``Raatikainen 1994a, Raatikainen 1994b''.  When an article has more
+than two authors, the citation should be given in the form ``[Kojo et
+  al.\ 1996]''.
+
+The style file provides the command \verb|\alternativecitationstyle|
+to support the alternative citation style.
+The following macros are defined to simplify the use of the
+alternative style:
+
+\begin{center}\begin{tabular}{ll}
+\hline
+ macro & produces\\ \hline
+ \verb|\cite{bibreflabel}| & ``[Author Year]''\\ 
+ \verb|\cite[note]{bibreflabel}| & ``[Author Year, note]''\\ 
+ \verb|\citet{bibreflabel}| & ``Author [Year]''\\ 
+ \verb|\citet[note]{bibreflabel}| & ``Author [Year, note]''\\ 
+ \verb|\citealt{bibreflabel}| & ``Author Year''\\ 
+ \verb|\citealt[note]{bibreflabel}| & ``Author Year, note''\\ 
+ \verb|\citeauthor{bibreflabel}| & ``Author''\\ 
+ \verb|\citeyear{bibreflabel}| & ``Year''\\ 
+\hline
+\end{tabular}\end{center}
+
+\noindent
+The macros above assume that your bibliography items are written as
+\begin{verbatim}
+   \bibitem[{Author}{Year}]{bibreflabel}
+   \bibitem[{Author}{Year1}]{bibreflabel1}
+   \bibitem[{Author}{Year2}]{bibreflabel2}
+\end{verbatim}
+The Bib\TeX\ style file \texttt{DIKU-alternative.bst} generates
+the bibliography items in the format above.
+
+\section{Use of the style files}
+
+We provide the following files:
+\begin{enumerate}
+\item
+\texttt{DIKU-article.cls} contains the \LaTeX\ code for producing the
+camera-ready output of your report.
+
+\item 
+\texttt{DIKU-report.cls} is designed for longer reports.
+It is used in the same way as \texttt{DIKU-article.cls}, but it
+provides some additional features like the \verb|titlepage|
+environment, commands \verb|\frontmatter|,
+\verb|\mainmatter|, \verb|\backmatter|, \verb|\tableofcontents|,
+\verb|\chapter|, \verb|\part|, and some undocumented features (for
+these you have to look at the \LaTeX\ source). 
+\item 
+\texttt{DIKU.bst} contains the Bib\TeX\ code which produces a reference
+list in the form preferred by us.
+
+\item
+\texttt{DIKU-alternative.bst} contains the Bib\TeX\ code which produces a reference list
+in the form suitable for the author-year citation style.
+\item
+\texttt{article-sample.tex} contains the \LaTeX\ source of these
+instructions.
+\item
+\texttt{article-sample.bib} contains the Bib\TeX\ source to produce
+the reference list.
+
+\item \texttt{article-sample.dict} is created by \texttt{ispell}.
+  It contains correctly spelled words that are not in the standard
+  dictionary.
+\item
+\texttt{example.fig} contains the example figure in
+ \texttt{xfig} format.
+
+\item
+\texttt{thesis-sample.tex} contains a brief introduction (in Danish)
+how to use the style file \verb|ku-forside.sty| when writing a thesis
+using \verb|DIKU-report.cls|.
+\item 
+\texttt{makefile} is provided to make your life easier.
+\item \texttt{article-sample.www} contains data used by our
+  crawler. When this file exists, the report will be made visible via
+  our web pages at \verb|cphstl.dk|.
+\end{enumerate}
+
+\noindent
+To prepare your report, type:
+\begin{verbatim}
+   shell> pdflatex article-sample.tex
+   shell> bibtex article-sample
+   shell> pdflatex article-sample.tex
+   shell> pdflatex article-sample.tex
+\end{verbatim}
+or
+\begin{verbatim}
+   shell> make
+\end{verbatim}
+ 
+\section{Disclaimer}
+
+The style files are not guaranteed to be free of errors.  Any bugs,
+inconsistencies, suggestions, and other comments should be reported by
+email to \texttt{jyrki@di.ku.dk}.
+
+\begin{acknowledgements}
+
+This section comes before the references and is unnumbered.
+\LaTeX-en\-viron\-ment is \verb|acknowledgements|.
+
+This style file was created by modifying the style file
+\texttt{njcarticle.cls} provided by the \textit{Nordic Journal of
+  Computing} (NJC) and copyrighted by Kimmo Raatikainen. He gave us
+the permission to use the style on 29 April 1996. His instructions for
+the NJC authors were used as the first draft of this document.
+\end{acknowledgements}
+
+\nocite{mowgli-overview,Raatikainen-1994a,Raatikainen-1994b}
+\bibliographystyle{DIKU} % Use DIKU-alternative for the other citation style
+\bibliography{article-sample}
+
+\end{document}
+

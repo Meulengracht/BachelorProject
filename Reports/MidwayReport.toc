@@ -1,0 +1,23 @@
+\select@language {english}
+\contentsline {chapter}{\numberline {1}Background}{3}
+\contentsline {section}{\numberline {1.1}Project Description}{3}
+\contentsline {section}{\numberline {1.2}Survey}{4}
+\contentsline {subsection}{\numberline {1.2.1}Minix}{4}
+\contentsline {subsection}{\numberline {1.2.2}Nachos}{5}
+\contentsline {subsection}{\numberline {1.2.3}Pintos}{6}
+\contentsline {subsection}{\numberline {1.2.4}Buenos}{7}
+\contentsline {subsection}{\numberline {1.2.5}Conclusion}{8}
+\contentsline {chapter}{\numberline {2}Design Choices}{9}
+\contentsline {section}{\numberline {2.1}Technical Choices}{9}
+\contentsline {subsection}{\numberline {2.1.1}Target Architecture}{9}
+\contentsline {subsection}{\numberline {2.1.2}Boot-loader}{10}
+\contentsline {section}{\numberline {2.2}Project Layout Changes}{10}
+\contentsline {chapter}{\numberline {3}Project Progress}{12}
+\contentsline {section}{\numberline {3.1}Setup}{12}
+\contentsline {section}{\numberline {3.2}Layout Changes}{12}
+\contentsline {section}{\numberline {3.3}Porting to X86-64 Architecture}{13}
+\contentsline {chapter}{\numberline {4}Next steps}{16}
+\contentsline {section}{\numberline {4.1}Memory Manager}{16}
+\contentsline {section}{\numberline {4.2}Driver System}{16}
+\contentsline {section}{\numberline {4.3}Updating Road-map}{17}
+\contentsline {chapter}{\numberline {5}Bibliography}{18}

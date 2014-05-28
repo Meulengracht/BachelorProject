@@ -1,0 +1,75 @@
+\documentclass[12pt,twoside,openright,pdftex]{DIKU-report}
+
+% KU-forside
+\usepackage[babel, da, titelside]{ku-forside} 
+\selectdanish
+
+% Titelsideinformation
+\titel{Mini-manual til stilfilen \texttt{ku-forside.sty}} %
+\undertitel{Test} %
+\opgave{Overspringsafhandling} % Findes kun under 'titelside'
+\forfatter{Forfatter}%
+\dato{Februar 2014}%
+\vejleder{Vejleder} %  Findes kun under 'titelside'
+
+\begin{document}
+\maketitle % laver forsiden
+
+\frontmatter
+
+\tableofcontents
+
+\mainmatter
+
+\chapter*{Introduktion}
+\addcontentsline{toc}{chapter}{Introduktion}%
+
+Dette er ett simpelt eksempel, hvordan man bruger stilfilen
+\verb|ku-forside.sty| sammen med \verb|DIKU-report.cls|.  Yderligere
+oplysninger, hvordan man bruger stilfilen \verb|DIKU-report.cls|,
+findes i rapporten \cite{KR14}. Denne rapport er genereret med
+optioner [\verb|twoside|, \verb|openright|] hvilket betyder, at i
+to-sidet udskrivning, alle kapitler starter fra højre side. Det vil
+sige, de tomme sider i outputtet er der med vilje.
+
+\section*{Brug af stilfilen}
+
+Stilfilen \verb|ku-forside.sty| kan bruges til at producere en forside
+til alle opgaver (f.eks.~bachelorprojekter, kandidatspecialer og
+phd-afhandlinger) skrevet på Københavns Universitet.  Stifilen
+accepterer følgende optioner:
+\begin{description}
+\item[Sprogmuligheder:]  \texttt{da}, \texttt{en}
+\item[Sprogvalg:] \verb|babel| --- undersøger det erklærede sprog og sætter pakken \verb|babel| derefter
+\item[Fakultetsmuligheder:] \verb|farma|, \verb|hum|, \verb|jur|, \verb|ku|, \verb|life|, \verb|nat|, \verb|samf|, \verb|sund|, \verb|teo|
+\item[Farvemuligheder:] \verb|sh|,  \verb|farve|
+\item[Forsidemuligheder:] \verb|lille|, \verb|stor|, \verb|titelside|
+\begin{description}
+\item[\texttt{titelside}:] forsiden bliver identisk med designet på
+  \texttt{ku.dk/designmanual}
+\item[\texttt{lille}:] giver et lille logo sammen med titlen på den første side
+\item[\texttt{stor}:] giver et stort logo sammen med titlen på den første side
+\end{description}
+\end{description}
+
+Standardindstillingerne er [\verb|da|, \verb|nat|, \verb|farve|,
+  \verb|titelside|].  Disse kan ændres, for eksempel, på følgende
+måde:
+\begin{quotation}
+\verb|\usepackage[babel, lille, jur, sh, en]{ku-forside}|
+\end{quotation}
+hvilket giver et lille logo i sorthvid for juridisk fakultet og loader
+\verb|babel|-pakken med engelsk som sprog.  Hvis du planlægger at bruge denne
+stilfil udenfor naturvidenskabelig fakultet eller i sorthvid, hent
+arkivet \verb|ku-forside.zip| fra internettet; det indeholder de
+nødvendige billedfiler.
+
+\begin{acknowledgements}
+Den danske tekst i dette dokument er fremstillet ved hjælp af Google
+Translate.
+\end{acknowledgements}
+
+\bibliographystyle{DIKU}
+\bibliography{article-sample}
+
+\end{document}
