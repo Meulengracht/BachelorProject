@@ -1,2 +1,0 @@
-\select@language {danish}
-\contentsline {chapter}{Introduktion}{1}
