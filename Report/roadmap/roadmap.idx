@@ -1,0 +1,599 @@
+\indexentry{hardware/software interface|hyperpage}{2}
+\indexentry{userland/kernel interface|hyperpage}{2}
+\indexentry{interrupt!handler|hyperpage}{2}
+\indexentry{threading, introduction|hyperpage}{3}
+\indexentry{SMP|hyperpage}{4}
+\indexentry{kernel!programming|hyperpage}{6}
+\indexentry{memory!using in the kernel|hyperpage}{6}
+\indexentry{kernel!using memory|hyperpage}{6}
+\indexentry{segments, memory|hyperpage}{6}
+\indexentry{memory!segments|hyperpage}{6}
+\indexentry{stalloc@\texttt{stalloc}|hyperpage}{6}
+\indexentry{stack|hyperpage}{6}
+\indexentry{interrupt!stack|hyperpage}{6}
+\indexentry{kernel!stack|hyperpage}{6}
+\indexentry{stack!kernel|hyperpage}{6}
+\indexentry{context|hyperpage}{7}
+\indexentry{console|hyperpage}{7}
+\indexentry{kprintf@\texttt{kprintf}|hyperpage}{7}
+\indexentry{kwrite@\texttt{kwrite}|hyperpage}{7}
+\indexentry{busy waiting|hyperpage}{7}
+\indexentry{floating point numbers|hyperpage}{7}
+\indexentry{co-processor unusable exception|hyperpage}{7}
+\indexentry{naming conventions|hyperpage}{7}
+\indexentry{debug printing|hyperpage}{7}
+\indexentry{DEBUG@\texttt  {DEBUG}|hyperpage}{8}
+\indexentry{calling convention|hyperpage}{8}
+\indexentry{C calling convention|hyperpage}{8}
+\indexentry{kernel!boot arguments|hyperpage}{8}
+\indexentry{boot arguments|hyperpage}{8}
+\indexentry{threading system|hyperpage}{9}
+\indexentry{threads|hyperpage}{9}
+\indexentry{thread\_table@\texttt{thread\_table}|hyperpage}{9}
+\indexentry{threads!states|hyperpage}{9}
+\indexentry{FREE@\texttt{FREE}|hyperpage}{9}
+\indexentry{RUNNING@\texttt{RUNNING}|hyperpage}{9}
+\indexentry{READY@\texttt{READY}|hyperpage}{9}
+\indexentry{SLEEPING@\texttt{SLEEPING}|hyperpage}{10}
+\indexentry{NONREADY@\texttt{NONREADY}|hyperpage}{10}
+\indexentry{DYING@\texttt{DYING}|hyperpage}{10}
+\indexentry{threads!table|hyperpage}{10}
+\indexentry{threads!ID|hyperpage}{10}
+\indexentry{TID\_t@\texttt{TID\_t}|hyperpage}{10}
+\indexentry{CONFIG\_MAX\_THREADS@\texttt{CONFIG\_MAX\_THREADS}|hyperpage}{10}
+\indexentry{thread\_table\_slock@\texttt{thread\_table\_slock}|hyperpage}{10}
+\indexentry{thread\_table\_init@\texttt{thread\_table\_init}|hyperpage}{10}
+\indexentry{threads!library|hyperpage}{10}
+\indexentry{threads!creation|hyperpage}{12}
+\indexentry{creating!a thread|hyperpage}{12}
+\indexentry{thread\_create@\texttt  {thread\_create}|hyperpage}{12}
+\indexentry{thread\_run@\texttt  {thread\_run}|hyperpage}{12}
+\indexentry{thread\_switch@\texttt  {thread\_switch}|hyperpage}{12}
+\indexentry{sleeps\_on@\texttt{sleeps\_on}|hyperpage}{12}
+\indexentry{software interrupt 0|hyperpage}{12}
+\indexentry{thread\_finish@\texttt  {thread\_finish}|hyperpage}{13}
+\indexentry{thread\_get\_current\_thread@\texttt  {thread\_get\_current\_thread}|hyperpage}{13}
+\indexentry{threads!ID|hyperpage}{13}
+\indexentry{TID@\texttt{TID}|hyperpage}{13}
+\indexentry{scheduler|hyperpage}{13}
+\indexentry{threads!priority|hyperpage}{13}
+\indexentry{priority, thread|hyperpage}{13}
+\indexentry{timeslice|hyperpage}{13}
+\indexentry{CONFIG\_SCHEDULER\_TIMESLICE@\texttt{CONFIG\_SCHEDULER\_TIMESLICE}|hyperpage}{13}
+\indexentry{scheduler\_current\_thread@\texttt{scheduler\_current\_thread}|hyperpage}{13}
+\indexentry{scheduler\_ready\_to\_run@\texttt{scheduler\_ready\_to\_run}|hyperpage}{13}
+\indexentry{scheduler!locking|hyperpage}{13}
+\indexentry{thread\_table\_slock@\texttt{thread\_table\_slock}|hyperpage}{13}
+\indexentry{timeticks|hyperpage}{13}
+\indexentry{timeslice|hyperpage}{13}
+\indexentry{timer!interrupt|hyperpage}{13}
+\indexentry{ready to run list|hyperpage}{14}
+\indexentry{DYING@\texttt{DYING}|hyperpage}{14}
+\indexentry{RUNNING@\texttt{RUNNING}|hyperpage}{14}
+\indexentry{FREE@\texttt{FREE}|hyperpage}{14}
+\indexentry{SLEEPING@\texttt{SLEEPING}|hyperpage}{14}
+\indexentry{READY@\texttt{READY}|hyperpage}{14}
+\indexentry{sleeps\_on@\texttt{sleeps\_on}|hyperpage}{14}
+\indexentry{scheduler\_schedule@\texttt  {scheduler\_schedule}|hyperpage}{14}
+\indexentry{scheduler\_current\_thread@\texttt{scheduler\_current\_thread}|hyperpage}{14}
+\indexentry{thread\_table\_slock@\texttt{thread\_table\_slock}|hyperpage}{14}
+\indexentry{scheduler\_ready\_to\_run@\texttt{scheduler\_ready\_to\_run}|hyperpage}{14}
+\indexentry{idle thread|hyperpage}{14}
+\indexentry{thread\_run@\texttt{thread\_run}|hyperpage}{14}
+\indexentry{scheduler\_add\_ready@\texttt  {scheduler\_add\_ready}|hyperpage}{14}
+\indexentry{idle thread|hyperpage}{15}
+\indexentry{IDLE\_THREAD\_TID@\texttt{IDLE\_THREAD\_TID}|hyperpage}{15}
+\indexentry{context switch!definition|hyperpage}{15}
+\indexentry{context|hyperpage}{15}
+\indexentry{exception|hyperpage}{15}
+\indexentry{timer!interrupt|hyperpage}{15}
+\indexentry{interrupt!handler|hyperpage}{15}
+\indexentry{program counter|hyperpage}{15}
+\indexentry{stack pointer|hyperpage}{15}
+\indexentry{execution context|hyperpage}{15}
+\indexentry{interrupt!handler|hyperpage}{15}
+\indexentry{interrupt!vectors|hyperpage}{16}
+\indexentry{kernel\_interrupt\_stacks@\texttt{kernel\_interrupt\_stacks}|hyperpage}{16}
+\indexentry{blocking interrupts|hyperpage}{16}
+\indexentry{cswitch\_switch@\texttt{cswitch\_switch}|hyperpage}{16}
+\indexentry{cswitch\_vector\_code@\texttt{cswitch\_vector\_code}|hyperpage}{16}
+\indexentry{interrupt\_init@\texttt{interrupt\_init}|hyperpage}{16}
+\indexentry{context switch!implementation|hyperpage}{16}
+\indexentry{\_cswitch\_switch@\texttt{\_cswitch\_switch}|hyperpage}{16}
+\indexentry{context!saving|hyperpage}{16}
+\indexentry{context\_t@\texttt{context\_t}|hyperpage}{16}
+\indexentry{scheduler\_current\_thread@\texttt{scheduler\_current\_thread}|hyperpage}{16}
+\indexentry{context!restoring|hyperpage}{17}
+\indexentry{interrupt\_handle@\texttt{interrupt\_handle}|hyperpage}{17}
+\indexentry{interrupt!stack area|hyperpage}{17}
+\indexentry{stack!for interrupts|hyperpage}{17}
+\indexentry{interrupt\_handle@\texttt{interrupt\_handle}|hyperpage}{17}
+\indexentry{kernel\_interrupt\_stacks@\texttt{kernel\_interrupt\_stacks}|hyperpage}{17}
+\indexentry{context|hyperpage}{17}
+\indexentry{interrupt!stack|hyperpage}{17}
+\indexentry{exception!handling|hyperpage}{17}
+\indexentry{kernel\_exception\_handle@\texttt{kernel\_exception\_handle}|hyperpage}{17}
+\indexentry{exception handling|hyperpage}{17}
+\indexentry{user\_exception\_handle@\texttt{user\_exception\_handle}|hyperpage}{17}
+\indexentry{UM bit|hyperpage}{17}
+\indexentry{EXL bit|hyperpage}{17}
+\indexentry{cswitch\_switch@\texttt{cswitch\_switch}|hyperpage}{17}
+\indexentry{context\_t@\texttt{context\_t}|hyperpage}{18}
+\indexentry{thread\_t@\texttt{thread\_t}|hyperpage}{18}
+\indexentry{threads!context|hyperpage}{18}
+\indexentry{context!saving area|hyperpage}{18}
+\indexentry{threads!table|hyperpage}{18}
+\indexentry{kernel!exceptions|hyperpage}{18}
+\indexentry{exception!kernel exceptions|hyperpage}{18}
+\indexentry{kernel\_exception\_handle@\texttt  {kernel\_exception\_handle}|hyperpage}{19}
+\indexentry{synchronization|hyperpage}{20}
+\indexentry{spinlock|hyperpage}{20}
+\indexentry{LL instruction|hyperpage}{20}
+\indexentry{SC instruction|hyperpage}{20}
+\indexentry{test-and-set|hyperpage}{20}
+\indexentry{RMW sequence|hyperpage}{20}
+\indexentry{spinlock\_acquire@\texttt  {spinlock\_acquire}|hyperpage}{21}
+\indexentry{spinlock\_release@\texttt  {spinlock\_release}|hyperpage}{21}
+\indexentry{spinlock\_reset@\texttt  {spinlock\_reset}|hyperpage}{21}
+\indexentry{sleep queue|hyperpage}{21}
+\indexentry{resource waiting|hyperpage}{21}
+\indexentry{waiting for a resource|hyperpage}{21}
+\indexentry{sleep queue!usage|hyperpage}{21}
+\indexentry{sleeping|hyperpage}{21}
+\indexentry{using the sleep queue|hyperpage}{21}
+\indexentry{sleepq\_add@\texttt{sleepq\_add}|hyperpage}{21}
+\indexentry{sleepq\_wake@\texttt{sleepq\_wake}|hyperpage}{21}
+\indexentry{sleepq\_wake\_all@\texttt{sleepq\_wake\_all}|hyperpage}{21}
+\indexentry{thread\_switch@\texttt{thread\_switch}|hyperpage}{22}
+\indexentry{sleep queue!implementation|hyperpage}{23}
+\indexentry{sleepq\_hashtable@\texttt{sleepq\_hashtable}|hyperpage}{23}
+\indexentry{sleepq\_slock@\texttt{sleepq\_slock}|hyperpage}{23}
+\indexentry{sleeps\_on@\texttt{sleeps\_on}|hyperpage}{23}
+\indexentry{sleepq\_add@\texttt  {sleepq\_add}|hyperpage}{23}
+\indexentry{sleepq\_wake@\texttt  {sleepq\_wake}|hyperpage}{23}
+\indexentry{sleeps\_on@\texttt{sleeps\_on}|hyperpage}{24}
+\indexentry{sleepq\_wake\_all@\texttt  {sleepq\_wake\_all}|hyperpage}{24}
+\indexentry{sleepq\_init@\texttt  {sleepq\_init}|hyperpage}{24}
+\indexentry{semaphores|hyperpage}{24}
+\indexentry{semaphore\_P()@\texttt{semaphore\_P}|hyperpage}{24}
+\indexentry{semaphore\_V()@\texttt{semaphore\_V}|hyperpage}{25}
+\indexentry{semaphores!implementation|hyperpage}{25}
+\indexentry{semaphore\_table@\texttt{semaphore\_table}|hyperpage}{25}
+\indexentry{semaphore\_table\_slock@\texttt{semaphore\_table\_slock}|hyperpage}{25}
+\indexentry{semaphore\_t@\texttt{semaphore\_t}|hyperpage}{25}
+\indexentry{semaphore\_create@\texttt  {semaphore\_create}|hyperpage}{25}
+\indexentry{semaphore\_table\_slock@\texttt{semaphore\_table\_slock}|hyperpage}{25}
+\indexentry{semaphore\_table@\texttt{semaphore\_table}|hyperpage}{25}
+\indexentry{semaphore\_destroy@\texttt  {semaphore\_destroy}|hyperpage}{26}
+\indexentry{semaphore\_V@\texttt  {semaphore\_V}|hyperpage}{26}
+\indexentry{semaphore\_P@\texttt  {semaphore\_P}|hyperpage}{26}
+\indexentry{userland!processes|hyperpage}{30}
+\indexentry{userland|hyperpage}{30}
+\indexentry{vm\_create\_pagetable@\texttt{vm\_create\_pagetable}|hyperpage}{30}
+\indexentry{userland!process context|hyperpage}{30}
+\indexentry{context!userland process|hyperpage}{30}
+\indexentry{thread\_t@\texttt{thread\_t}|hyperpage}{30}
+\indexentry{user\_context@\texttt{user\_context}|hyperpage}{30}
+\indexentry{context\_t@\texttt{context\_t}|hyperpage}{30}
+\indexentry{process startup|hyperpage}{30}
+\indexentry{startup of userland processes|hyperpage}{30}
+\indexentry{process\_start@\texttt  {process\_start}|hyperpage}{30}
+\indexentry{context\_t@\texttt{context\_t}|hyperpage}{31}
+\indexentry{thread\_goto\_userland@\texttt{thread\_goto\_userland}|hyperpage}{31}
+\indexentry{ELF|hyperpage}{31}
+\indexentry{userland!binary format|hyperpage}{31}
+\indexentry{binary format, userland programs|hyperpage}{31}
+\indexentry{read-only segment|hyperpage}{32}
+\indexentry{read-write segment|hyperpage}{32}
+\indexentry{entry point|hyperpage}{32}
+\indexentry{program entry point|hyperpage}{32}
+\indexentry{eclf\_parse\_header@\texttt{elf\_parse\_header}|hyperpage}{32}
+\indexentry{elf\_info\_t@\texttt{elf\_info\_t}|hyperpage}{32}
+\indexentry{elf\_parse\_header@\texttt  {elf\_parse\_header}|hyperpage}{32}
+\indexentry{userland!exception handling|hyperpage}{34}
+\indexentry{handling exceptions, userland|hyperpage}{34}
+\indexentry{TLB!miss|hyperpage}{34}
+\indexentry{system calls|hyperpage}{34}
+\indexentry{user\_exception\_handle@\texttt  {user\_exception\_handle}|hyperpage}{34}
+\indexentry{system calls|hyperpage}{34}
+\indexentry{bullet proofing|hyperpage}{34}
+\indexentry{system calls!number|hyperpage}{35}
+\indexentry{registers!a0--a3|hyperpage}{35}
+\indexentry{registers!v0|hyperpage}{35}
+\indexentry{EXL bit|hyperpage}{35}
+\indexentry{software interrupt|hyperpage}{35}
+\indexentry{thread\_switch@\texttt{thread\_switch}|hyperpage}{35}
+\indexentry{system calls|hyperpage}{35}
+\indexentry{list of system calls|hyperpage}{35}
+\indexentry{binary compatibility|hyperpage}{35}
+\indexentry{adding system calls|hyperpage}{35}
+\indexentry{system calls!adding new|hyperpage}{35}
+\indexentry{halting the operating system|hyperpage}{36}
+\indexentry{syscall\_halt@\texttt  {syscall\_halt}|hyperpage}{36}
+\indexentry{syscall\_open@\texttt  {syscall\_open}|hyperpage}{36}
+\indexentry{syscall\_close@\texttt  {syscall\_close}|hyperpage}{36}
+\indexentry{syscall\_create@\texttt  {syscall\_create}|hyperpage}{36}
+\indexentry{syscall\_delete@\texttt  {syscall\_delete}|hyperpage}{36}
+\indexentry{syscall\_seek@\texttt  {syscall\_seek}|hyperpage}{36}
+\indexentry{syscall\_read@\texttt  {syscall\_read}|hyperpage}{37}
+\indexentry{syscall\_write@\texttt  {syscall\_write}|hyperpage}{37}
+\indexentry{syscall\_exit@\texttt  {syscall\_exit}|hyperpage}{37}
+\indexentry{syscall\_exec@\texttt  {syscall\_exec}|hyperpage}{37}
+\indexentry{syscall\_join@\texttt  {syscall\_join}|hyperpage}{38}
+\indexentry{zombie|hyperpage}{38}
+\indexentry{syscall\_fork@\texttt  {syscall\_fork}|hyperpage}{38}
+\indexentry{syscall\_memlimit@\texttt  {syscall\_memlimit}|hyperpage}{38}
+\indexentry{syscall\_execp@\texttt  {syscall\_execp}|hyperpage}{38}
+\indexentry{virtual memory|hyperpage}{41}
+\indexentry{VM|hyperpage}{41}
+\indexentry{ADDR\_PHYS\_TO\_KERNEL@\texttt{ADDR\_PHYS\_TO\_KERNEL}|hyperpage}{41}
+\indexentry{ADDR\_KERNEL\_TO\_PHYS@\texttt{ADDR\_KERNEL\_TO\_PHYS}|hyperpage}{41}
+\indexentry{TLB|hyperpage}{41}
+\indexentry{page size, memory|hyperpage}{41}
+\indexentry{hardware!memory page size|hyperpage}{41}
+\indexentry{memory!page size|hyperpage}{41}
+\indexentry{size!memory page|hyperpage}{41}
+\indexentry{memory!segmentation|hyperpage}{41}
+\indexentry{segments, memory|hyperpage}{41}
+\indexentry{user mapped memory region|hyperpage}{41}
+\indexentry{memory!user mapped region|hyperpage}{41}
+\indexentry{memory!mapping|hyperpage}{42}
+\indexentry{memory segments!kernel unmapped|hyperpage}{42}
+\indexentry{memory segments!kernel unmapped uncached|hyperpage}{42}
+\indexentry{memory segments!supervisor mapped|hyperpage}{42}
+\indexentry{memory segments!kernel mapped|hyperpage}{42}
+\indexentry{kernel memory segment!unmapped|hyperpage}{42}
+\indexentry{kernel memory segment!unmapped uncached|hyperpage}{42}
+\indexentry{supervisor mapped memory segment|hyperpage}{42}
+\indexentry{kernel memory segment!mapped|hyperpage}{42}
+\indexentry{physical memory address|hyperpage}{42}
+\indexentry{vm\_init@\texttt{vm\_init}|hyperpage}{42}
+\indexentry{kmalloc@\texttt{kmalloc}|hyperpage}{42}
+\indexentry{page pool|hyperpage}{42}
+\indexentry{memory!reservation, page pool|hyperpage}{42}
+\indexentry{pagepool\_free\_pages@\texttt{pagepool\_free\_pages}|hyperpage}{42}
+\indexentry{pagepool\_init@\texttt  {pagepool\_init}|hyperpage}{42}
+\indexentry{pagepool\_get\_phys\_page@\texttt  {pagepool\_get\_phys\_page}|hyperpage}{43}
+\indexentry{pagepool\_free\_phys\_page@\texttt  {pagepool\_free\_phys\_page}|hyperpage}{43}
+\indexentry{page tables|hyperpage}{43}
+\indexentry{memory!mapping|hyperpage}{43}
+\indexentry{mapping memory|hyperpage}{43}
+\indexentry{pagetable\_t@\texttt{pagetable\_t}|hyperpage}{43}
+\indexentry{tlb\_fill@\texttt{tlb\_fill}|hyperpage}{44}
+\indexentry{vm\_create\_pagetable@\texttt  {vm\_create\_pagetable}|hyperpage}{44}
+\indexentry{vm\_destroy\_pagetable@\texttt  {vm\_destroy\_pagetable}|hyperpage}{44}
+\indexentry{adding memory mappings|hyperpage}{44}
+\indexentry{memory!mapping|hyperpage}{44}
+\indexentry{mapping memory|hyperpage}{44}
+\indexentry{vm\_map@\texttt  {vm\_map}|hyperpage}{45}
+\indexentry{unmapping memory|hyperpage}{45}
+\indexentry{vm\_unmap@\texttt  {vm\_unmap}|hyperpage}{45}
+\indexentry{vm\_set\_dirty@\texttt  {vm\_set\_dirty}|hyperpage}{45}
+\indexentry{dirty bit|hyperpage}{45}
+\indexentry{dirty memory page|hyperpage}{45}
+\indexentry{read-only memory mapping|hyperpage}{45}
+\indexentry{TLB|hyperpage}{45}
+\indexentry{translation lookaside buffer|hyperpage}{45}
+\indexentry{MMU|hyperpage}{45}
+\indexentry{memory management unit|hyperpage}{45}
+\indexentry{memory!mapped range|hyperpage}{45}
+\indexentry{mapped memory region|hyperpage}{45}
+\indexentry{ASID|hyperpage}{46}
+\indexentry{address space identifier|hyperpage}{46}
+\indexentry{tlb\_entry\_t@\texttt{tlb\_entry\_t}|hyperpage}{46}
+\indexentry{TLB!exceptions|hyperpage}{46}
+\indexentry{exception!TLB exceptions|hyperpage}{46}
+\indexentry{tlb\_load\_exception@\texttt  {tlb\_load\_exception}|hyperpage}{46}
+\indexentry{tlb\_store\_exception@\texttt  {tlb\_store\_exception}|hyperpage}{46}
+\indexentry{tlb\_modified\_exception@\texttt  {tlb\_modified\_exception}|hyperpage}{46}
+\indexentry{exception!TLB miss, load reference|hyperpage}{46}
+\indexentry{TLB!miss (load) exception|hyperpage}{46}
+\indexentry{EXCEPTION\_TLBL@\texttt{EXCEPTION\_TLBL}|hyperpage}{46}
+\indexentry{exception!TLB miss, store reference|hyperpage}{46}
+\indexentry{TLB!miss (store) exception|hyperpage}{46}
+\indexentry{EXCEPTION\_TLBS@\texttt{EXCEPTION\_TLBS}|hyperpage}{46}
+\indexentry{exception!TLB miss, modified|hyperpage}{46}
+\indexentry{TLB!modified exception|hyperpage}{46}
+\indexentry{EXCEPTION\_TLBM@\texttt{EXCEPTION\_TLBM}|hyperpage}{46}
+\indexentry{TLB!exception wrappers|hyperpage}{46}
+\indexentry{\_tlb\_get\_exception\_state@\texttt  {\_tlb\_get\_exception\_state}|hyperpage}{48}
+\indexentry{tlb\_exception\_state\_t@\texttt{tlb\_exception\_state\_t}|hyperpage}{48}
+\indexentry{\_tlb\_set\_asid@\texttt  {\_tlb\_set\_asid}|hyperpage}{48}
+\indexentry{ASID|hyperpage}{48}
+\indexentry{TLB!size|hyperpage}{48}
+\indexentry{size!TLB|hyperpage}{48}
+\indexentry{\_tlb\_get\_maxindex@\texttt  {\_tlb\_get\_maxindex}|hyperpage}{48}
+\indexentry{\_tlb\_probe@\texttt  {\_tlb\_probe}|hyperpage}{48}
+\indexentry{\_tlb\_read@\texttt  {\_tlb\_read}|hyperpage}{49}
+\indexentry{\_tlb\_write@\texttt  {\_tlb\_write}|hyperpage}{49}
+\indexentry{\_tlb\_write\_random@\texttt  {\_tlb\_write\_random}|hyperpage}{49}
+\indexentry{filling the TLB|hyperpage}{49}
+\indexentry{TLB!filling|hyperpage}{49}
+\indexentry{tlb\_fill@\texttt  {tlb\_fill}|hyperpage}{50}
+\indexentry{filesystem|hyperpage}{52}
+\indexentry{filesystem!conventions|hyperpage}{52}
+\indexentry{conventions, filesystem|hyperpage}{52}
+\indexentry{pathname!absolute|hyperpage}{52}
+\indexentry{absolute pathnames|hyperpage}{52}
+\indexentry{mount-point|hyperpage}{52}
+\indexentry{volume (filesystem)|hyperpage}{52}
+\indexentry{filesystem!volume|hyperpage}{52}
+\indexentry{directories|hyperpage}{52}
+\indexentry{filesystem!directories|hyperpage}{52}
+\indexentry{filesystem!layers|hyperpage}{52}
+\indexentry{generic devices!block|hyperpage}{52}
+\indexentry{virtual filesystem|hyperpage}{53}
+\indexentry{VFS|hyperpage}{53}
+\indexentry{mount-point|hyperpage}{53}
+\indexentry{volume, filesystem|hyperpage}{53}
+\indexentry{filesystem!volume|hyperpage}{53}
+\indexentry{mounting filesystems|hyperpage}{53}
+\indexentry{return values, VFS|hyperpage}{53}
+\indexentry{VFS!return values|hyperpage}{53}
+\indexentry{VFS\_OK@\texttt{VFS\_OK}|hyperpage}{53}
+\indexentry{VFS\_NOT\_SUPPORTED@\texttt{VFS\_NOT\_SUPPORTED}|hyperpage}{53}
+\indexentry{VFS\_INVALID\_PARAMS@\texttt{VFS\_INVALID\_PARAMS}|hyperpage}{53}
+\indexentry{VFS\_NOT\_OPEN@\texttt{VFS\_NOT\_OPEN}|hyperpage}{53}
+\indexentry{VFS\_NOT\_FOUND@\texttt{VFS\_NOT\_FOUND}|hyperpage}{53}
+\indexentry{VFS\_NO\_SUCH\_FS@\texttt{VFS\_NO\_SUCH\_FS}|hyperpage}{53}
+\indexentry{VFS\_LIMIT@\texttt{VFS\_LIMIT}|hyperpage}{53}
+\indexentry{VFS\_IN\_USE@\texttt{VFS\_IN\_USE}|hyperpage}{53}
+\indexentry{VFS\_ERROR@\texttt{VFS\_ERROR}|hyperpage}{54}
+\indexentry{VFS\_UNUSABLE@\texttt{VFS\_UNUSABLE}|hyperpage}{54}
+\indexentry{filesystem!limits|hyperpage}{54}
+\indexentry{filename, maximum length of|hyperpage}{54}
+\indexentry{maximum length!filename|hyperpage}{54}
+\indexentry{VFS\_NAME\_LENGTH@\texttt{VFS\_NAME\_LENGTH}|hyperpage}{54}
+\indexentry{pathname!maximum length|hyperpage}{54}
+\indexentry{maximum length!pathname|hyperpage}{54}
+\indexentry{VFS\_PATH\_LENGTH@\texttt{VFS\_PATH\_LENGTH}|hyperpage}{54}
+\indexentry{vfs\_table@\texttt{vfs\_table}|hyperpage}{55}
+\indexentry{openfile\_table@\texttt{openfile\_table}|hyperpage}{55}
+\indexentry{vfs\_op\_sem@\texttt{vfs\_op\_sem}|hyperpage}{55}
+\indexentry{vfs\_unmount\_sem@\texttt{vfs\_unmount\_sem}|hyperpage}{55}
+\indexentry{vfs\_ops@\texttt{vfs\_ops}|hyperpage}{55}
+\indexentry{vfs\_usable@\texttt{vfs\_usable}|hyperpage}{55}
+\indexentry{VFS!filesystem operations|hyperpage}{55}
+\indexentry{vfs\_init@\texttt  {vfs\_init}|hyperpage}{55}
+\indexentry{forceful unmount|hyperpage}{56}
+\indexentry{unmount, forceful|hyperpage}{56}
+\indexentry{vfs\_deinit@\texttt  {vfs\_deinit}|hyperpage}{56}
+\indexentry{vfs\_start\_op@\texttt  {vfs\_start\_op}|hyperpage}{56}
+\indexentry{VFS!operation|hyperpage}{56}
+\indexentry{vfs\_end\_op@\texttt  {vfs\_end\_op}|hyperpage}{56}
+\indexentry{file operations, VFS|hyperpage}{57}
+\indexentry{VFS!file operations|hyperpage}{57}
+\indexentry{vfs\_open@\texttt  {vfs\_open}|hyperpage}{57}
+\indexentry{files!open files|hyperpage}{57}
+\indexentry{open files|hyperpage}{57}
+\indexentry{closing files|hyperpage}{57}
+\indexentry{vfs\_close@\texttt  {vfs\_close}|hyperpage}{57}
+\indexentry{vfs\_seek@\texttt  {vfs\_seek}|hyperpage}{58}
+\indexentry{reading files|hyperpage}{58}
+\indexentry{writing files|hyperpage}{58}
+\indexentry{files!writing|hyperpage}{58}
+\indexentry{files!reading|hyperpage}{58}
+\indexentry{vfs\_read@\texttt  {vfs\_read}|hyperpage}{58}
+\indexentry{vfs\_write@\texttt  {vfs\_write}|hyperpage}{59}
+\indexentry{creating!files|hyperpage}{59}
+\indexentry{removing files|hyperpage}{59}
+\indexentry{deleting files|hyperpage}{59}
+\indexentry{files!deleting|hyperpage}{59}
+\indexentry{files!creating|hyperpage}{59}
+\indexentry{vfs\_create@\texttt  {vfs\_create}|hyperpage}{59}
+\indexentry{vfs\_remove@\texttt  {vfs\_remove}|hyperpage}{60}
+\indexentry{mounting filesystems|hyperpage}{60}
+\indexentry{unmounting filesystems|hyperpage}{60}
+\indexentry{vfs\_mount\_all@\texttt  {vfs\_mount\_all}|hyperpage}{60}
+\indexentry{vfs\_mount\_fs@\texttt  {vfs\_mount\_fs}|hyperpage}{61}
+\indexentry{vfs\_mount@\texttt  {vfs\_mount}|hyperpage}{61}
+\indexentry{free space, filesystem|hyperpage}{62}
+\indexentry{filesystem!free space|hyperpage}{62}
+\indexentry{vfs\_getfree@\texttt  {vfs\_getfree}|hyperpage}{62}
+\indexentry{filesystem!driver|hyperpage}{62}
+\indexentry{driver!filesystem|hyperpage}{62}
+\indexentry{fs\_t@\texttt{fs\_t}|hyperpage}{62}
+\indexentry{filesystems\_try\_all@\texttt  {filesystems\_try\_all}|hyperpage}{64}
+\indexentry{Trivial Filesystem|hyperpage}{65}
+\indexentry{TFS|hyperpage}{65}
+\indexentry{tfstool|hyperpage}{65}
+\indexentry{volume header block (TFS)|hyperpage}{65}
+\indexentry{TFS!volume header block|hyperpage}{65}
+\indexentry{block allocation table (TFS)|hyperpage}{65}
+\indexentry{TFS!block allocation table|hyperpage}{65}
+\indexentry{BAT|hyperpage}{65}
+\indexentry{MD|hyperpage}{65}
+\indexentry{master directory block (TFS)|hyperpage}{65}
+\indexentry{TFS!master directory block|hyperpage}{65}
+\indexentry{tfs\_init@\texttt  {tfs\_init}|hyperpage}{66}
+\indexentry{tfs\_unmount@\texttt  {tfs\_unmount}|hyperpage}{67}
+\indexentry{tfs\_open@\texttt  {tfs\_open}|hyperpage}{67}
+\indexentry{tfs\_close@\texttt  {tfs\_close}|hyperpage}{67}
+\indexentry{tfs\_create@\texttt  {tfs\_create}|hyperpage}{67}
+\indexentry{tfs\_remove@\texttt  {tfs\_remove}|hyperpage}{68}
+\indexentry{tfs\_read@\texttt  {tfs\_read}|hyperpage}{68}
+\indexentry{tfs\_write@\texttt  {tfs\_write}|hyperpage}{69}
+\indexentry{tfs\_getfree@\texttt  {tfs\_getfree}|hyperpage}{69}
+\indexentry{networking|hyperpage}{72}
+\indexentry{network!layers|hyperpage}{72}
+\indexentry{generic devices!network|hyperpage}{72}
+\indexentry{GND|hyperpage}{72}
+\indexentry{network!stack|hyperpage}{72}
+\indexentry{NIC|hyperpage}{72}
+\indexentry{network!addresses|hyperpage}{72}
+\indexentry{loopback address, network|hyperpage}{72}
+\indexentry{network!frame|hyperpage}{72}
+\indexentry{frame, network|hyperpage}{72}
+\indexentry{network!payload|hyperpage}{72}
+\indexentry{payload, network|hyperpage}{72}
+\indexentry{header!network|hyperpage}{72}
+\indexentry{network!header|hyperpage}{72}
+\indexentry{network\_protocols@\texttt{network\_protocols}|hyperpage}{73}
+\indexentry{network\_protocols\_t@\texttt{network\_protocols\_t}|hyperpage}{73}
+\indexentry{frame\_handler\_t@\texttt{frame\_handler\_t}|hyperpage}{73}
+\indexentry{frame\_handler@\texttt  {frame\_handler}|hyperpage}{73}
+\indexentry{network\_init@\texttt  {network\_init}|hyperpage}{74}
+\indexentry{network!service thread|hyperpage}{74}
+\indexentry{receive service thread, network|hyperpage}{74}
+\indexentry{service thread, network|hyperpage}{74}
+\indexentry{network\_receive\_thread@\texttt  {network\_receive\_thread}|hyperpage}{74}
+\indexentry{network\_receive\_frame@\texttt  {network\_receive\_frame}|hyperpage}{74}
+\indexentry{network!service API|hyperpage}{74}
+\indexentry{service API, network|hyperpage}{74}
+\indexentry{network\_get\_source\_address@\texttt  {network\_get\_source\_address}|hyperpage}{75}
+\indexentry{CONFIG\_MAX\_GNDS@\texttt{CONFIG\_MAX\_GNDS}|hyperpage}{75}
+\indexentry{network\_get\_broadcast\_address@\texttt  {network\_get\_broadcast\_address}|hyperpage}{75}
+\indexentry{network\_get\_loopback\_address@\texttt  {network\_get\_loopback\_address}|hyperpage}{75}
+\indexentry{network\_get\_mtu@\texttt  {network\_get\_mtu}|hyperpage}{75}
+\indexentry{network\_send@\texttt  {network\_send}|hyperpage}{75}
+\indexentry{network\_send\_interface@\texttt  {network\_send\_interface}|hyperpage}{76}
+\indexentry{network\_free\_frame@\texttt  {network\_free\_frame}|hyperpage}{76}
+\indexentry{Packet Oriented Protocol|hyperpage}{76}
+\indexentry{POP|hyperpage}{76}
+\indexentry{port numbers, POP|hyperpage}{76}
+\indexentry{POP!port numbers|hyperpage}{76}
+\indexentry{sockets, network|hyperpage}{76}
+\indexentry{sockets, network|hyperpage}{77}
+\indexentry{open\_sockets@\texttt{open\_sockets}|hyperpage}{77}
+\indexentry{socket\_descriptor\_t@\texttt{socket\_descriptor\_t}|hyperpage}{77}
+\indexentry{CONFIG\_MAX\_OPEN\_SOCKETS@\texttt{CONFIG\_MAX\_OPEN\_SOCKETS}|hyperpage}{77}
+\indexentry{open\_sockets\_sem@\texttt{open\_sockets\_sem}|hyperpage}{77}
+\indexentry{socket\_sendto@\texttt{socket\_sendto}|hyperpage}{77}
+\indexentry{socket\_recvfrom@\texttt{socket\_recvfrom}|hyperpage}{77}
+\indexentry{socket\_connect@\texttt{socket\_connect}|hyperpage}{77}
+\indexentry{socket\_read@\texttt{socket\_read}|hyperpage}{77}
+\indexentry{socket\_listen@\texttt{socket\_listen}|hyperpage}{77}
+\indexentry{socket\_write@\texttt{socket\_write}|hyperpage}{77}
+\indexentry{socket\_init@\texttt  {socket\_init}|hyperpage}{77}
+\indexentry{socket\_open@\texttt  {socket\_open}|hyperpage}{77}
+\indexentry{socket\_close@\texttt  {socket\_close}|hyperpage}{78}
+\indexentry{POP|hyperpage}{78}
+\indexentry{POP!header|hyperpage}{78}
+\indexentry{header!POP|hyperpage}{78}
+\indexentry{queue, POP|hyperpage}{78}
+\indexentry{POP!queue|hyperpage}{78}
+\indexentry{CONFIG\_POP\_QUEUE\_SIZE@\texttt{CONFIG\_POP\_QUEUE\_SIZE}|hyperpage}{78}
+\indexentry{pop\_queue\_sem@\texttt{pop\_queue\_sem}|hyperpage}{78}
+\indexentry{pop\_push\_frame@\texttt{pop\_push\_frame}|hyperpage}{79}
+\indexentry{pop\_init@\texttt  {pop\_init}|hyperpage}{79}
+\indexentry{pop\_push\_frame@\texttt  {pop\_push\_frame}|hyperpage}{79}
+\indexentry{CONFIG\_POP\_QUEUE\_MIN\_AGE@\texttt{CONFIG\_POP\_QUEUE\_MIN\_AGE}|hyperpage}{80}
+\indexentry{pop\_service\_thread@\texttt  {pop\_service\_thread}|hyperpage}{80}
+\indexentry{socket\_sendto@\texttt  {socket\_sendto}|hyperpage}{81}
+\indexentry{socket\_recvfrom@\texttt  {socket\_recvfrom}|hyperpage}{81}
+\indexentry{SOP|hyperpage}{82}
+\indexentry{Stream Oriented Protocol|hyperpage}{82}
+\indexentry{connection oriented protocol|hyperpage}{82}
+\indexentry{socket\_connect@\texttt  {socket\_connect}|hyperpage}{82}
+\indexentry{socket\_listen@\texttt  {socket\_listen}|hyperpage}{82}
+\indexentry{socket\_read@\texttt  {socket\_read}|hyperpage}{82}
+\indexentry{socket\_write@\texttt  {socket\_write}|hyperpage}{82}
+\indexentry{device drivers|hyperpage}{84}
+\indexentry{devices|hyperpage}{84}
+\indexentry{DMA|hyperpage}{84}
+\indexentry{memory!mapped I/O|hyperpage}{84}
+\indexentry{top half, device driver|hyperpage}{84}
+\indexentry{bottom half, device driver|hyperpage}{84}
+\indexentry{shared IRQ|hyperpage}{84}
+\indexentry{IRQ, shared|hyperpage}{84}
+\indexentry{interrupt!handler|hyperpage}{85}
+\indexentry{registering interrupt handlers|hyperpage}{85}
+\indexentry{interrupt\_register@\texttt  {interrupt\_register}|hyperpage}{85}
+\indexentry{interrupt\_handle@\texttt  {interrupt\_handle}|hyperpage}{85}
+\indexentry{device abstraction layers|hyperpage}{86}
+\indexentry{generic devices|hyperpage}{86}
+\indexentry{drivers\_available@\texttt{drivers\_available}|hyperpage}{86}
+\indexentry{device drivers!implementing new ones|hyperpage}{86}
+\indexentry{implementing a device driver|hyperpage}{86}
+\indexentry{volatile@\texttt{volatile}|hyperpage}{87}
+\indexentry{drivers\_available@\texttt{drivers\_available}|hyperpage}{87}
+\indexentry{device\_t@\texttt{device\_t}|hyperpage}{87}
+\indexentry{io\_descriptor\_t@\texttt{io\_descriptor\_t}|hyperpage}{87}
+\indexentry{device\_init@\texttt  {device\_init}|hyperpage}{87}
+\indexentry{device\_get@\texttt  {device\_get}|hyperpage}{89}
+\indexentry{GCD|hyperpage}{89}
+\indexentry{generic devices!character|hyperpage}{89}
+\indexentry{generic devices!block|hyperpage}{89}
+\indexentry{GBD|hyperpage}{89}
+\indexentry{gbd\_t@\texttt{gbd\_t}|hyperpage}{89}
+\indexentry{gbd\_request\_t@\texttt{gbd\_request\_t}|hyperpage}{89}
+\indexentry{gbd\_operation\_t@\texttt{gbd\_operation\_t}|hyperpage}{89}
+\indexentry{GBD\_OPERATION\_READ@\texttt{GBD\_OPERATION\_READ}|hyperpage}{89}
+\indexentry{GBD\_OPERATION\_WRITE@\texttt{GBD\_OPERATION\_WRITE}|hyperpage}{89}
+\indexentry{GND|hyperpage}{92}
+\indexentry{generic devices!network|hyperpage}{92}
+\indexentry{gnd\_t@\texttt{gnd\_t}|hyperpage}{92}
+\indexentry{polling TTY driver|hyperpage}{92}
+\indexentry{driver!polling TTY|hyperpage}{92}
+\indexentry{polltty\_init@\texttt  {polltty\_init}|hyperpage}{92}
+\indexentry{polltty\_getchar@\texttt  {polltty\_getchar}|hyperpage}{92}
+\indexentry{polltty\_putchar@\texttt  {polltty\_putchar}|hyperpage}{94}
+\indexentry{interrupt!TTY driver|hyperpage}{94}
+\indexentry{driver!interrupt driven TTY|hyperpage}{94}
+\indexentry{tty\_init@\texttt  {tty\_init}|hyperpage}{94}
+\indexentry{tty\_interrupt\_handle@\texttt  {tty\_interrupt\_handle}|hyperpage}{94}
+\indexentry{tty\_write@\texttt  {tty\_write}|hyperpage}{95}
+\indexentry{tty\_read@\texttt  {tty\_read}|hyperpage}{95}
+\indexentry{network!driver|hyperpage}{96}
+\indexentry{NIC|hyperpage}{96}
+\indexentry{disk driver|hyperpage}{96}
+\indexentry{driver!disk|hyperpage}{96}
+\indexentry{disk scheduler|hyperpage}{96}
+\indexentry{disk\_init@\texttt  {disk\_init}|hyperpage}{96}
+\indexentry{disk\_interrupt\_handle@\texttt  {disk\_interrupt\_handle}|hyperpage}{97}
+\indexentry{disk\_next\_request@\texttt  {disk\_next\_request}|hyperpage}{98}
+\indexentry{disk\_read\_block@\texttt  {disk\_read\_block}|hyperpage}{98}
+\indexentry{disk\_write\_block@\texttt  {disk\_write\_block}|hyperpage}{98}
+\indexentry{disk\_submit\_request@\texttt  {disk\_submit\_request}|hyperpage}{98}
+\indexentry{disk\_block\_size@\texttt  {disk\_block\_size}|hyperpage}{99}
+\indexentry{disk\_total\_blocks@\texttt  {disk\_total\_blocks}|hyperpage}{99}
+\indexentry{disk scheduler|hyperpage}{100}
+\indexentry{disksched\_schedule@\texttt  {disksched\_schedule}|hyperpage}{100}
+\indexentry{timer!driver|hyperpage}{100}
+\indexentry{timer\_set\_ticks@\texttt  {timer\_set\_ticks}|hyperpage}{100}
+\indexentry{\_timer\_set\_ticks@\texttt  {\_timer\_set\_ticks}|hyperpage}{100}
+\indexentry{metadevice drivers|hyperpage}{101}
+\indexentry{meminfo|hyperpage}{101}
+\indexentry{meminfo\_init@\texttt  {meminfo\_init}|hyperpage}{101}
+\indexentry{meminfo\_get\_pages@\texttt  {meminfo\_get\_pages}|hyperpage}{101}
+\indexentry{RTC|hyperpage}{101}
+\indexentry{real time clock|hyperpage}{101}
+\indexentry{rtc\_init@\texttt  {rtc\_init}|hyperpage}{101}
+\indexentry{rtc\_get\_msec@\texttt  {rtc\_get\_msec}|hyperpage}{101}
+\indexentry{rtc\_get\_clockspeed@\texttt  {rtc\_get\_clockspeed}|hyperpage}{101}
+\indexentry{shutdown driver|hyperpage}{101}
+\indexentry{shutdown\_init@\texttt  {shutdown\_init}|hyperpage}{101}
+\indexentry{shutdown@\texttt  {shutdown}|hyperpage}{102}
+\indexentry{DEFAULT\_SHUTDOWN\_MAGIC@\texttt{DEFAULT\_SHUTDOWN\_MAGIC}|hyperpage}{102}
+\indexentry{POWEROFF\_SHUTDOWN\_MAGIC@\texttt{POWEROFF\_SHUTDOWN\_MAGIC}|hyperpage}{102}
+\indexentry{CPU status driver|hyperpage}{102}
+\indexentry{interrupt!inter-CPU|hyperpage}{102}
+\indexentry{inter-CPU interrupts|hyperpage}{102}
+\indexentry{cpustatus\_init@\texttt  {cpustatus\_init}|hyperpage}{102}
+\indexentry{cpustatus\_count@\texttt  {cpustatus\_count}|hyperpage}{102}
+\indexentry{cpustatus\_generate\_irq@\texttt  {cpustatus\_generate\_irq}|hyperpage}{102}
+\indexentry{cpustatus\_interrupt\_handle@\texttt  {cpustatus\_interrupt\_handle}|hyperpage}{102}
+\indexentry{booting|hyperpage}{104}
+\indexentry{system bootup|hyperpage}{104}
+\indexentry{hardware!initialization|hyperpage}{104}
+\indexentry{detecting hardware|hyperpage}{104}
+\indexentry{init\_startup\_thread()@\texttt{init\_startup\_thread()}|hyperpage}{105}
+\indexentry{start-up, system|hyperpage}{105}
+\indexentry{bootargs\_get@\texttt  {bootargs\_get}|hyperpage}{106}
+\indexentry{random numbers|hyperpage}{106}
+\indexentry{random numbers!seed|hyperpage}{106}
+\indexentry{kernel!configuration|hyperpage}{107}
+\indexentry{CONFIG\_MAX\_THREADS@\texttt  {CONFIG\_MAX\_THREADS}|hyperpage}{107}
+\indexentry{CONFIG\_THREAD\_STACKSIZE@\texttt  {CONFIG\_THREAD\_STACKSIZE}|hyperpage}{107}
+\indexentry{CONFIG\_MAX\_CPUS@\texttt  {CONFIG\_MAX\_CPUS}|hyperpage}{107}
+\indexentry{CONFIG\_SCHEDULER\_TIMESLICE@\texttt  {CONFIG\_SCHEDULER\_TIMESLICE}|hyperpage}{107}
+\indexentry{CONFIG\_BOOTARGS\_MAX@\texttt  {CONFIG\_BOOTARGS\_MAX}|hyperpage}{108}
+\indexentry{CONFIG\_MAX\_SEMAPHORES@\texttt  {CONFIG\_MAX\_SEMAPHORES}|hyperpage}{108}
+\indexentry{CONFIG\_MAX\_DEVICES@\texttt  {CONFIG\_MAX\_DEVICES}|hyperpage}{108}
+\indexentry{CONFIG\_MAX\_FILESYSTEMS@\texttt  {CONFIG\_MAX\_FILESYSTEMS}|hyperpage}{108}
+\indexentry{CONFIG\_MAX\_OPEN\_FILES@\texttt  {CONFIG\_MAX\_OPEN\_FILES}|hyperpage}{108}
+\indexentry{CONFIG\_MAX\_OPEN\_SOCKETS@\texttt  {CONFIG\_MAX\_OPEN\_SOCKETS}|hyperpage}{108}
+\indexentry{CONFIG\_POP\_QUEUE\_SIZE@\texttt  {CONFIG\_POP\_QUEUE\_SIZE}|hyperpage}{108}
+\indexentry{CONFIG\_POP\_QUEUE\_MIN\_AGE@\texttt  {CONFIG\_POP\_QUEUE\_MIN\_AGE}|hyperpage}{108}
+\indexentry{CONFIG\_MAX\_GNDS@\texttt  {CONFIG\_MAX\_GNDS}|hyperpage}{108}
+\indexentry{CONFIG\_USERLAND\_STACK\_SIZE@\texttt  {CONFIG\_USERLAND\_STACK\_SIZE}|hyperpage}{109}

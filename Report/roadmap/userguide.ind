@@ -1,0 +1,50 @@
+\begin{theindex}
+
+  \item \texttt{CHANGEDFLAGS}, \hyperpage{8}
+  \item compiling
+    \subitem the system, \hyperpage{6}
+    \subitem userland programs, \hyperpage{6}, \hyperpage{9}
+  \item creating
+    \subitem a TFS volume, \hyperpage{9}
+
+  \indexspace
+
+  \item \texttt{FILES}, \hyperpage{7}
+
+  \indexspace
+
+  \item GNU Make, \hyperpage{5}
+  \item GRUB, \hyperpage{5}
+
+  \indexspace
+
+  \item \texttt{IGNOREDREGEX}, \hyperpage{8}
+  \item invoking \texttt{YAMS}, \hyperpage{6}
+
+  \indexspace
+
+  \item Make, \hyperpage{5}
+  \item makefiles, \hyperpage{7}
+  \item \texttt{MODULES}, \hyperpage{8}
+
+  \indexspace
+
+  \item \texttt{SOURCES}, \hyperpage{9}
+
+  \indexspace
+
+  \item TFS
+    \subitem creating a volume, \hyperpage{9}
+
+  \indexspace
+
+  \item userland
+    \subitem compiling programs, \hyperpage{6}, \hyperpage{9}
+
+  \indexspace
+
+  \item YAMS, \hyperpage{5}
+    \subitem invoking, \hyperpage{6}
+  \item \texttt{yamst}, \hyperpage{6}
+
+\end{theindex}

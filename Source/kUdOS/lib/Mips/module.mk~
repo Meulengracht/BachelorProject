@@ -1,8 +1,0 @@
-# Makefile for the lib module
-
-# Set the module name
-MODULE := lib/Mips
-
-FILES := rand.S
-
-SRC += $(patsubst %, $(MODULE)/%, $(FILES))
